@@ -1,0 +1,30 @@
+# Import pandas, numpy, and matplotlib
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+# seaborn is a data visualization library built on matplotlib
+import seaborn as sns 
+
+# set the plotting style 
+sns.set_style("whitegrid")
+
+# Plot missing values
+import missingno as msno
+
+df = pd.read_csv('https://raw.githubusercontent.com/nocheazul/co2emissions/main/owid-co2-data.csv')
+
+non_countries = ['Africa', 'Africa (GCP)', 'Asia', 'Asia (GCP)', 'Asia (excl. China and India)', 'Central America (GCP)',
+                  'EU-27', 'Europe', 'Europe (excl. EU-27)', 'European Union (27) (GCP)', 'Europe (GCP)',
+                  'Europe (excl. EU-28)', 'European Union (27)', 
+                  'European Union (28)', 'French Equatorial Africa', 
+                  'French Guiana', 'French Polynesia', 'French West Africa',
+                  'High-income countries', 'International transport', 
+                  'Low-income countries', 'Lower-middle-income countries', 'Mayotte', 'Middle East (GCP)',
+                  'Non-OECD (GCP)',
+                  'North America',  'North America (excl. USA)', 'North America (GCP)',
+                  'Oceania (GCP)', 'OECD (GCP)', 
+                  'Panama Canal Zone','South America', 'South America (GCP)', 'Upper-middle-income countries', 
+                  'World']
+                  
+                  df_countries = df.loc[df['country'].isin(non_countries) == False]

@@ -15,7 +15,7 @@ Collection of CO2 and greenhouse gas emissions data maintained by Our World In D
 
 # Data Processing:
 
-Because this project is only concerned with the CO2 emissions of individual countries, the data was processed using Pandas to remove any non-country (such as regions, continents, or the world) entries in the original data frame. This process can be found in the file
+Because this project is only concerned with the CO2 emissions of individual countries, the data was processed using Pandas to remove any non-country (such as regions, continents, or the world) entries in the original data frame. This process can be found in the file titled "Clean Data Frame (Only Countries)".
 
 
 # Author(s):
